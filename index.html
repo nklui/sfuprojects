@@ -1,355 +1,78 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-
-    <meta charset="utf-8">
-    <title>Style Guide</title>
-
-    <link href="css/main.css" rel="stylesheet">
-
-  </head>
-
-  <body>
-
-    <h1>Style Guide</h1>
-
-    <nav>
-      
-      <p>
-        <a href="#interactive_elements" class="button-2">Interactive Elements</a>l
-        <a href="#text_elements" class="button-2">Text Elements</a>l
-        <a href="#combined_elements" class="button-2">Combined Elements</a>
-      </p>
-
-    </nav>
-
-
-    <!-- INTERACTIVE ELEMENTS SECTION // -->
-    <section id="interactive_elements">
-
-      <!-- Default Button styling section -->
-
-      <section>
-        <h2>In-text link</h2>
-
-        <h3>CSS selector:</h3>
-        <p> p & a</p>
-
-        <h3>Sample Code:</h3>
-        <code>&lt;a href="#"&gt;an in-text link&lt;/a&gt;</code>
-
-        <h3>Rendered element:</h3>
-        <a href="#" class="in-text">write a review</a>
-
-      </section>
-
-      <section>
-        <h2>Navigation Button</h2>
-
-        <h3>CSS selector:</h3>
-        <p>.button-nav</p>
-
-        <h3>Sample code:</h3>
-        <code>&lt;a href="#" class="button"&gt;Default Button&lt;/a&gt;</code>
-
-        <h3>Rendered element:</h3>
-        <a href="#" class="button-3">DEFAULT BUTTON</a>
-
-      </section>
-
-      <section>
-        <h2>Submit/Reset Buttons</h2>
-
-        <h3>CSS selector:</h3>
-        <p>.button-submit</p>
-
-        <h3>Sample code:</h3>
-        <code>&lt;a href="#" class="button-submit"&gt;Submit&lt;/a&gt;</code>
-
-        <h3>Rendered element:</h3>
-        <a class="button-submit">SUBMIT</a>
-
-      </section>
-
-      <section>
-        <h2>Text Input Field</h2>
-
-        <h3>CSS selector:</h3>
-        <p>label, .form-type </p>
-
-        <h3>Sample code:</h3>
-        <code>
-          &lt;form&gt;<br>&nbsp;&lt;label&gt; Search &lt;/label&gt; <br> &nbsp;&lt;input class="form-type" type="text" name="number"&gt; 
-          <br>&lt;/form&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <form>
-        <label> Credit Card Number: </label> </br>
-        <input class="form-type" type="text" name="number">
-        </form>
-      </section>
-
-    </section>
-    <!-- // INTERACTIVE ELEMENTS SECTION -->
-
-
-    <!-- TEXT ELEMENTS SECTION // -->
-    <section id="text_elements">
-
-      <section>
-        <h2>Headings</h2>
-        <h3>CSS selector:</h3>
-        <p>h1, h2, h3</p>
-
-        <h3>Sample code:</h3>
-        <code>
-        &lt;h1&gt;Heading H1&lt;/h1&gt;
-        </code> 
-        </br>
-        <code>
-        &lt;h2&gt;Heading H2&lt;/h2&gt;
-        </code>
-        </br>
-        <code>
-        &lt;h3&gt;Heading H3&lt;/h3&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <h1>About Us</h1>
-        <h2>Categories</h2>
-        <h3>Proceed to Checkout</h3>
-      </section>
-
-      <section>
-        <h2>Paragraphs</h2>
-
-        <h3>CSS selector:</h3>
-        <p>p<p>
-
-        <h3>Sample code:</h3>
-        <code>
-        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit...&lt;/p&gt;
-        </code>
-        <h3>Rendered element:</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </section>
-
-      <section>
-        <h2>Bulleted Lists</h2>
-
-        <h3>CSS selector:</h3>
-        <p>ul</p>
-
-        <h3>Sample code:</h3>
-        <code>
-        &lt;ul type="1"&gt; </br>
-        &nbsp;&lt;li&gt;item 1&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;item 2&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;item 3&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;item 4&lt;/li&gt; </br>
-        &lt;/ul&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <ul type="1">
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
-          <li>item 4</li>
-        </ul>
-
-      </section>
-
-      <section>
-        <h2>Numbered Lists</h2>
-
-        <h3>CSS selector:</h3>
-        <p>ol</p>
-
-        <h3>Sample code:</h3>
-        <code>
-        &lt;ol type="1"&gt; </br>
-        &nbsp;&lt;li&gt;item 1&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;item 2&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;item 3&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;item 4&lt;/li&gt; </br>
-        &lt;/ol&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <ol type="1">
-          <li>item 1</li>
-          <li>item 2</li>
-          <li>item 3</li>
-          <li>item 4</li>
-        </ol>
-
-      </section>
-
-    </section>
-    <!-- // TEXT ELEMENTS SECTION -->
-
-
-
-    <!-- COMBINED ELEMENTS SECTION // -->
-    <section id="combined_elements">
-
-      <section class="nav">
-        <h2>Main Navigation</h2>
-
-        <h3>CSS selector:</h3>
-        <p>ul, li, a</p>
-
-        <h3>Sample code:</h3>
-
-        <code>
-        &lt;ul&gt; </br>
-        &nbsp;&lt;li&gt;&lt;a href="#"&gt; nav1 &lt;/a&gt;&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;&lt;a href="#"&gt; nav2 &lt;/a&gt;&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;&lt;a href="#"&gt; nav3 &lt;/a&gt;&lt;/li&gt; </br>
-        &nbsp;&lt;li&gt;&lt;a href="#"&gt; nav4 &lt;/a&gt;&lt;/li&gt; </br>
-        &lt;/ul&gt;
-        </code>
-
-
-        <h3>Rendered element:</h3>
-
-        <header>
-          <img class="logo" src="sources/logo.jpg" alt="https://www.google.com/search?q=snow+peak+logo&sxsrf=ACYBGNR1wriH6B7kAedz-BU6opjKnMbwSw:1580871586959&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiP5oDLtbnnAhV1JTQIHR0qCTQQ_AUoAXoECAwQAw&biw=1422&bih=801#imgrc=83IPEZ_rmZD7GM">
-           <nav class="header_nav">
-          <a href="#" class="header_nav_a">SHOP</a>
-          <a href="#" class="header_nav_a">CONTACT</a>
-          <a href="#" class="header_nav_a">ABOUT</a>
-          <img src="sources/cart.png" style="width:1.2%"> 
-          <input type="text" placeholder="SEARCH"></input>
-          <img src="sources/search.png" style="width:1.2%">
-          </nav>
-        </header>
-
-      </section>
-
-      <section>
-        <h2>Product Listing</h2>
-
-        <h3>CSS selector:</h3>
-        <p>.conatiner, .block</p>
-
-        <h3>Sample code:</h3>
-        <code>
-          &lt;div class="container"&gt;<br>
-          &nbsp;&lt;div class="block"&gt;<br>
-          &nbsp;&nbsp;&lt;h4&gt;3 Person Tent &lt;/h4&gt;<br>
-          &nbsp;&nbsp;&lt;a href = "#"&gt;<br>
-          &nbsp;&nbsp;&nbsp;&lt;img src="img/tent.jpg" alt="HTML tutorial" style="width:100%"&gt;<br>
-          &nbsp;&nbsp;&lt;a&gt;<br>
-          &nbsp;&nbsp;&lt;h5&gt;$400&lt;br&gt;&lt;a href = "#" class="in-text-style"&gt;add to cart&lt;/a&gt;&lt;/h5&gt;<br>
-          &nbsp;&lt;/div&gt;<br>
-          &lt;/div&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <div class="container">
-          <div class="block">
-            <a href="https://snowpeak.com/collections/tents-tarps/products/living-shell-pro-series-ivory">
-              <img src="sources/camp1.jpg" alt="https://www.mec.ca/en/product/5060-353/Double-Hammock-with-Tree-Straps" style="width:100%"> </a>
-            <h4>LIVING SHELL LONG PRO IVORY</h4>
-            <h5>$1,790</h5> </br>
-            <a href = "#" class="in-text">add to cart</a>
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>IAT399 - P02</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   		<link href="css/main.css" rel="stylesheet">
+   		<link href="css/nav.css" rel="stylesheet">
+   		<link href="css/grid.css" rel="stylesheet">
+	</head>
+
+	<body>
+
+		<!--Navigation Bar-->
+		<header>
+			<nav class="navBar">
+				<nav class="wrapper">
+
+					<div class="logo">
+						<a href="index.html" class="nav-logo"></a>
+					</div>
+
+		         	<input type="checkbox" id="css-toggle" name="css-toggle-menu"> 
+		         	
+			        <ul>
+		               <li><a href="shop.html">SHOP</a></li>
+		               <li><a href="contact.html">CONTACT</a></li>
+		               <li><a href="about.html">ABOUT</a></li>
+		               <li><a href="search.html"><span class="search_icon"></span>&#8203;</a></li> 
+		               <li><a href="cart.html"><span class="cart_icon"></span>&#8203;</a></li> 
+			        </ul>
+
+		         	<label for="css-toggle" id="css-toggle-menu">&#8203;
+		         		<span class="container" onclick="myFunction(this)">
+						 	<span class="bar1"></span>
+						  	<span class="bar2"></span>
+						  	<span class="bar3"></span>
+						</span>
+		         	</label>	          
+		        </nav>
+		   </nav>
+		</header>
+
+		<div class="container-4">
+		  <div class="block">
+             <a href="https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/">
+              <img src="sources/background.jpg" style="width:100%"> </a>
+          </div>
+      </div>
+
+      <div class="container">
+		  <div class="block">
+              <a href="https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/">
+              <img src="sources/tent.jpg" style="width:100%"> </a>
           </div>
 
           <div class="block">
-            <a href="https://www.mec.ca/en/product/5060-353/Double-Hammock-with-Tree-Straps">
-              <img src="sources/camp2.jpg" alt="https://www.mec.ca/en/product/5060-353/Double-Hammock-with-Tree-Straps" style="width:100%"> </a>
-            <h4>DOCK DOME PRO.6 IVORY</h4> 
-            <h5>$1,790</h5></br>
-            <a href = "#" class="in-text">add to cart</a>
+             <a href="https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/">
+              <img src="sources/cooking.jpg" style="width:100%"> </a>
           </div>
 
           <div class="block">
-            <a href="https://snowpeak.com/collections/tents-tarps/products/land-lock-ivory">
-              <img src="sources/camp3.jpg" alt="https://www.mec.ca/en/product/5060-353/Double-Hammock-with-Tree-Straps" style="width:100%">
-            </a>
-            <h4>LANDLOCK IVORY</h4>
-            <h5>$1,790</h5></br>
-            <a href = "#" class="in-text">add to cart</a>
+             <a href="https://www.pexels.com/photo/two-man-hiking-on-snow-mountain-869258/">
+              <img src="sources/hammi.jpg" style="width:100%"> </a>
           </div>
-        </div>
+      </div>
 
-      </section>
+       	<footer>
+		      <a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+		      <a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+		      <a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+		      <h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+  		</footer>
 
-      <section>
-        <h2>Website Grid Structure</h2>
+	</body>
 
-        <h3>CSS selector:</h3>
-        <p>.flex-grid, .flex-item</p>
-
-        <h3>Sample code:</h3>
-        <code>&lt;div class="flex-grid"&gt;<br>
-          &nbsp;&lt;div class="flex-item"&gt;1/4 &lt;/div&gt;<br>
-          &nbsp;&lt;div class="flex-item"&gt;1/4 &lt;/div&gt;<br>
-          &nbsp;&lt;div class="flex-item"&gt;1/4 &lt;/div&gt;<br>
-          &nbsp;&lt;div class="flex-item"&gt;1/4 &lt;/div&gt;<br>
-          &lt;/div&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <div class="flex-grid">
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-            <div class="flex-item">1 / 12</div>
-          </div>
-      </section>
-
-      <section>
-        <h2>Website Color Swatches</h2>
-
-        <h3>CSS selector:</h3>
-        <p>.color-main-item, .bg1, .bg2, .bg3, .bg4, .bg5</p>
-
-        <h3>Sample code:</h3>
-        <code>
-        &lt;nav class="color-swatches"&gt;</br>
-        &nbsp;&lt;a class="color-main-item box-item-nav"&gt; #19363B &lt;/a&gt;</br>
-        &nbsp;&lt;a class="color-main-item bg1 box-item-nav"&gt; #5E726E &lt;/a&gt;</br>
-        &nbsp;&lt;a class="color-main-item bg2 box-item-nav"&gt; #1F2D1C &lt;/a&gt;</br>
-        &nbsp;&lt;a class="color-main-item bg3 box-item-nav"&gt; #FFFFFF &lt;/a&gt;</br>
-        &nbsp;&lt;a class="color-main-item bg4 box-item-nav"&gt; #BFb27B &lt;/a&gt;</br>
-        &lt;/nav&gt;
-        </code>
-
-        <h3>Rendered element:</h3>
-        <nav class="color-main box"> <!--added box, now it has 2 classes, nav-main and box -->
-
-        <a class="color-main-item box-item-nav">#bfa87b</a>
-        <a class="color-main-item bg1 box-item-nav">#5c5c5c</a>
-        <a class="color-main-item bg2 box-item-nav">#000000</a>
-        <a class="color-main-item bg3 box-item-nav">#ffffff</a>
-        <a class="color-main-item bg4 box-item-nav">#faf7f0</a>
-    
-        </nav>
-      </section>
-
-    </section>
-    <!-- // COMBINED ELEMENTS SECTION -->
-
-
-  </body>
-
-  <footer>
-      <a href="sitemap.html">SITEMAP</a>
-      <a href="https://github.com/nklui/sfuprojects/tree/master">OUR GITHUB</a>
-      <p>Copyright © 2020. Nicholas Lui & Jessie Lee. IAT 339 D102</p>
-
-  </footer>
 </html>

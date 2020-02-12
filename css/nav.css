@@ -1,0 +1,246 @@
+
+/*NAVIGATION */
+.navBar {
+  background-color: #FFFFFF;
+  position: fixed;
+  min-width: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+.nav-logo {
+  display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  content: url('../sources/logo.jpg');
+  width: 12rem;
+
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 0;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart_icon {
+  content: url('../sources/cart.png');
+
+  width: 1rem;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
+.cart_icon:hover {
+  content: url('../sources/cart2.png');
+
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  
+  /*citation:http://stackoverflow.com/questions/4717117/css-image-link-change-on-hover*/
+}
+
+.search_icon {
+  content: url('../sources/search.png');
+  
+  width: 1rem;
+  vertical-align: middle;
+  margin-bottom: 0.5rem;
+}
+
+.search_icon:hover {
+  content: url('../sources/search2.png');
+  
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  
+  /*citation:http://stackoverflow.com/questions/4717117/css-image-link-change-on-hover*/
+}
+
+nav ul {
+  width: 70%;
+  display: flex; 
+  flex-wrap: wrap; 
+  max-width: 90%; 
+  list-style-type: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+nav li:last-child {
+  border-bottom: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  display: block;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+nav a:hover {
+  color:#bfa077;
+}
+
+nav li {
+  position: relative;
+  line-height: 3rem;
+  color: black;
+  display: inline-block;
+
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+} 
+
+nav input, nav label {
+  display: none;
+} 
+
+nav label {
+  position: absolute;
+  top: 0.9rem;
+  right: 2rem;
+}
+
+nav label:hover {
+  cursor:pointer;
+}
+
+label .container {
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 2rem;
+    float: right;
+}
+
+label .bar1, label .bar2, label .bar3 {
+
+    display: block;
+    width: 1.2rem;
+    height: 0.5rem;
+    margin: 0 0 0 0.9rem;
+    border-top: 0.1rem solid black;
+
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-0.1rem, 1rem);
+    transform: rotate(-45deg) translate(-0.1rem, 1rem);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+    transform: rotate(45deg) translate(-0.5rem, -0.6rem);
+}
+
+/*************** MEDIA QUERIES *******************/
+@media only screen and (max-width: 90rem) {
+
+    nav ul {
+    max-width: 75%;
+
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    }
+    
+    .white-space {
+    width: 100%;
+      height: 4rem;
+  }
+}
+
+@media only screen and (max-width: 83rem) {
+
+  nav ul{
+    max-width: 85%;
+
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    }
+}
+
+@media only screen and (max-width: 69rem) {
+
+  .cart_icon {
+    width: 1.2rem;
+  }
+
+  .resv_icon {
+    width: 1.2rem;
+  }
+
+  nav ul {
+    transition: all 1s ease;
+    visibility: hidden;
+    height: 0;
+    width: 100%;
+    display: block;
+    margin: 0 auto;  
+    opacity: 0; 
+
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    } 
+
+  nav li {
+    flex: none; 
+    width: 100%;
+    border-bottom: solid 1px #777;
+    padding: 1.5em 0;
+    text-align: center;
+    }
+
+  nav li:last-child {
+      margin-bottom: 4rem;
+    }
+
+    nav input[type="checkbox"]:checked + ul {
+      width: auto;
+      transition: all 0.2s ease;
+      height: 100vh;
+      visibility: visible;
+      opacity: 1;
+      overflow-y: scroll;
+      -webkit-overflow-scrolling:touch;
+    }
+
+  nav label {
+      display: block;
+    }  
+
+  nav input[type="checkbox"]:checked + ul li:nth-child(1) {
+    color: #000000;
+  }  
+
+  .wrapper {
+      display: block;
+    }
+
+    ::-webkit-scrollbar { 
+      display: none; 
+    }
+}
+
+@media only screen and (max-width: 69rem) and (max-height: 40rem) {
+
+  nav li {    
+    padding: 1em 0;
+    } 
+}
