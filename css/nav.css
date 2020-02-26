@@ -19,6 +19,31 @@
   transition: all 0.2s ease;
 }
 
+/*Event Bar*/
+.eventBar{
+  width:100%;
+  background-color: #000000;
+  margin: 0;
+  padding-top: 0.5%;
+  padding-bottom: 0.5%;
+  font-size:11px;
+}
+
+.eventText{
+  width:85%;
+  color: #ffffff;
+}
+
+.eventLink{
+  width:5%;
+  display: inline-block;
+}
+
+.eventLink a{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 90%;
@@ -26,6 +51,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  width:90%;
 }
 
 .cart_icon {

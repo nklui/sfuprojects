@@ -14,8 +14,48 @@
 
 
 body {
-  margin: 2%;
+  margin:0;
   font-family:"helvetica";
+}
+
+video::-webkit-media-controls {
+  display: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 10rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  font-size: 0.8rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: white;
 }
 
 
@@ -59,6 +99,64 @@ body {
     background-color: BLACK ;
     color: WHITE;
     transition: 0.7s;
+  }
+
+  .button-3-1{
+    position: absolute;
+    top: 61%;
+    left: 45%;
+    background-color: transparent;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 4px 43px;
+    border: 1px solid white;
+    letter-spacing: 4px;
+}
+
+.block_6 h4, .block_7 h4, .block_8 h4{
+    position: absolute;
+    background-color: white;
+    color: black;
+    text-align: left;
+    letter-spacing: 2px;
+    margin: 7rem 7.5rem;
+}
+
+.block_7 h4{
+    margin: 7rem 9rem;
+}
+
+.block_8 h4{
+   margin: 7rem 10.5rem;
+}
+
+ .container-4 h1{
+    position: absolute;
+    top: 46%;
+    left: 32%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+ }
+
+  .container-4 h4{
+    font-size: 0.9rem;
+    position: absolute;
+    top: 43%;
+    left: 32%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+ }
+
+.button-3-1:hover{
+    background-color: white ;
+    color: black;
+    transition: 0.5s;
   }
 
 .button-submit{
@@ -179,7 +277,6 @@ section code{
 }
 
 
-
 /* GRID IN STYLEGUIDE */
 
 .flex-grid .flex-item{
@@ -218,6 +315,49 @@ header{
   padding-bottom:1%;
   font-size: 12px;
 }
+
+/* Event Header */
+.eventHeader{
+  margin-top: 10%;
+  margin-left: 2em;
+}
+
+.eventHeader p{
+  opacity:70%;
+}
+
+.tag{
+  position: absolute;
+  display: block;
+  background-color: #bfa87b;
+  color: #ffffff;
+  padding: 1em;
+  margin: 1em;
+  letter-spacing:0.3em;
+}
+
+.out-tag{
+  position: absolute;
+  display: block;
+  background-color: #5c5c5c;
+  color: #ffffff;
+  opacity: 70%;
+  padding: 1em;
+  margin: 1em;
+  letter-spacing:0.3em;
+}
+
+.out-tag-1{
+  position:relative;
+  display: inline-block;
+  background-color: #5c5c5c;
+  color: #ffffff;
+  opacity: 70%;
+  padding: 1em;
+  margin: 1em;
+  letter-spacing:0.3em;
+}
+/**/
 
 /* NAV IN STYLEGUIDE */
 
@@ -315,7 +455,7 @@ header{
 }
 
 .container img:hover {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .container-2 img:hover {
@@ -345,6 +485,22 @@ header{
   line-height: 1px;
 }
 
+/* Updated */
+.block h6{
+  opacity: 50%;
+  font-family: "BrandonGrotesque-Light";
+  float: right;
+  margin-block-start: 1.67em;
+  margin-block-end: 1.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+  text-decoration: line-through;
+  padding-right:1em;
+}
+
+/**/
+
 .block_1 h6{
   font-family: "BrandonGrotesque-Light";
   float: left;
@@ -353,6 +509,7 @@ header{
   line-height: 30px;
   font-weight: normal;
   padding: 2rem;
+  background-color:none;
 }
 
 .block_3 h6{
@@ -362,7 +519,15 @@ header{
   font-size: 14px;
   line-height: 30px;
   font-weight: normal;
-  padding: 2rem;
+  padding: 1.5rem;
+  margin-right: 5rem;
+}
+
+.block_3 h4{
+  float: left;
+  text-align: left;
+  line-height: 30px;
+  padding: 1.5rem;
   margin-right: 5rem;
 }
 
@@ -401,7 +566,7 @@ header{
   margin-left: 2rem;
   }
 
-.block, .block_1, .block_2, .block_3 {
+.block, .block_1, .block_2, .block_3, .block_6, .block_7, .block_8 {
   flex-grow: 1;
   flex-basis: 350px;
 }
