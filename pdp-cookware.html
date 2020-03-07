@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<title>Barista Kettle</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Linking with CSS files --> 
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Top Bar -->
+	<header>
+
+		<!-- Event Bar -->
+		<div class="event-bar">
+			<span class="event-text">SALES! 40% OFF for Selected Camping Products 
+				<span class="event-link">
+					<a href="event.html">Shop Now</a>
+				</span>
+			</span>
+		</div>
+
+		<!-- Navigation Bar: Desktop -->
+		<div class="nav-main-normal">
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<nav>
+				<div class="nav-dropdown">
+					<a href="#" class="nav-dropdown-main">SHOP</a>
+					<div class="nav-dropdown-shop">
+						<a href="tents.html" class="nav-dropdown-shop-link">Tents</a>
+						<a href="cookwares.html" class="nav-dropdown-shop-link">Cookwares</a>
+					</div>
+				</div>
+				<a href="contact.html">CONTACT</a>
+				<a href="about.html">ABOUT</a> 
+				<a href="cart.html" class="nav-cart">
+					<!-- <span class="nav-cart"></span> -->
+					<img src="sources/cart-black.png" id="menu-cart-img" onmouseover="navCartHover();" onmouseout="navCartNormalGen();" alt="Cart Icon">
+					(0)
+				</a>
+			</nav>
+
+		</div>
+
+		<!-- Navigation Bar: Mobile -->
+		<div class="nav-mobile-normal">
+
+			<!-- Open Condensed Navigation Bar -->
+			<button onclick="navExpand();" id="nav-mobile-menu-open">MENU</button>
+
+			<button onclick="navClose();" id="nav-mobile-menu-close" class="nav-mobile-menu-close">CLOSE</button>
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" id="nav-logo-mobile-normal" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<!-- My Cart -->
+			<a href="cart.html">
+				<img class="nav-cart" id="menu-cart-img-mobile" src="sources/cart-black.png" alt="Cart Icon">
+				(0)
+			</a>
+
+		</div>
+
+		<!-- Condensed Navigation Bar -->
+		<div id="navMobileExpand" class="nav-mobile-expand">
+
+			<a href="#" onclick="shopExpand();" class="nav-dropdown-main">SHOP</a>
+			
+			<a href="tents.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-tent">Tents</a>
+			<a href="cookwares.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-cookware">Cookwares</a>
+			
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			
+		</div>
+
+	</header>
+
+	<div class="container">
+
+		<!-- Button back to PLP -->
+		<a href="cookwares.html" id="back" class="in-text">Back</a>
+
+		<!-- Product Information -->
+		<div class="pdp-information">
+
+			<!-- Product Image -->
+			<div class="pdp-image">
+
+				<img src="sources/kettle.jpg" alt="pdp product image">
+
+			</div>
+
+			<!-- Product Details -->
+			<div class="pdp-details">
+
+				<!-- Status Tag -->
+				<h5 class="tag-sales">ON SALES</h5>
+
+				<h1>BARISTA KETTLE</h1>
+
+				<!-- Introduction of Product -->
+				<h6>
+					Referencing professional grade barista equipment, our Barista Kettle is designed to gives you a slow, controlled and precise flow of water that is optimal for extracting the most flavour when you brew coffee or tea using the pour-over method.
+				</h6>
+
+				<!-- Features of Products -->
+				<h6>Features:</h6>
+
+				<p>Capacity: 0.8L</p>
+				<p>Body: Stainless Steel, brass, natural wood</p>
+				<p>Weight: 19.05oz (540g)</p>
+				<p>10.5" W x 4.8" H x 7" D</p>
+				<p>Two-year limited warranty</p>
+
+				<!-- Price -->
+				<h5>$140</h5>
+
+				<!-- add to cart -->
+				<a href="cart.html" class="button-black-border">add to cart</a>
+
+			</div>
+
+		</div>
+
+		<div class="pdp-review">
+
+			<h4>Review</h4>
+
+			<div class="pdp-review-list">
+
+				<div class="pdp-review-list-row">
+
+					<!-- User Info -->
+					<div class="pdp-user">
+
+						<h5>Edwin Li</h5>
+
+						<img src="sources/star.png" alt="rating">
+
+					</div>
+
+					<div class="pdp-comment">
+
+						<p>
+							very good kettle. I like it very much!
+						</p>
+
+						<p>
+							Yes, I would recommend to a friend.
+						</p>
+
+					</div>
+
+				</div>
+
+				<div class="pdp-review-list-row">
+
+					<!-- User Info -->
+					<div class="pdp-user">
+
+						<h5>Frankie</h5>
+
+						<img src="sources/star-1.png" alt="rating">
+
+					</div>
+
+					<div class="pdp-comment">
+
+						<p>
+							Looked long and hard. Small, unbreakable, portable pot for camping use!Perfect for tea and coffee pourover.
+						</p>
+
+						<p>
+							Yes, I would recommend to a friend.
+						</p>
+						
+					</div>
+
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<!-- Write a review -->
+		<div class="pdp-write-review">
+
+			<h4>Write a Review</h4>
+
+			<form class="review-form">
+
+				<label for="name">Your Name:</label>
+				<input type="text" id="name">
+
+				<label for="message">Comment:</label>
+				<input type="text" id="message" placeholder="Leave your comment here...">
+
+			</form>
+
+			<a class="button-submit">Submit</a>
+
+		</div>
+
+	</div>
+
+	<footer>
+
+		<a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+		<a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+		<a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+		<h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+
+	</footer>
+	
+</body>
+</html>

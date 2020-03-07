@@ -1,119 +1,189 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<title>IAT399 - P02</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   		<link href="css/main.css" rel="stylesheet">
-   		<link href="css/nav.css" rel="stylesheet">
-   		<link href="css/grid.css" rel="stylesheet">
-	</head>
+<head>
 
-	<body>
+	<title>About Trek</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!--Navigation Bar-->
-		<header>
-			<nav class="navBar">
+	<!-- Linking with CSS files --> 
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-				<p class="eventBar">
-          			<span class="eventText">SALES! 40% OFF for Selected Camping Products</span>
-          			<span class="eventLink"><a href="event.html">Shop Now</a></span>
-        		</p>
-        		
-				<nav class="wrapper">
+	<script src="js/main.js"></script>
 
-					<div class="logo">
-						<a href="index.html" class="nav-logo"></a>
+</head>
+
+<body>
+
+	<!-- Top Bar -->
+	<header>
+
+		<!-- Event Bar -->
+		<div class="event-bar">
+			<span class="event-text">SALES! 40% OFF for Selected Camping Products 
+				<span class="event-link">
+					<a href="event.html">Shop Now</a>
+				</span>
+			</span>
+		</div>
+
+		<!-- Navigation Bar: Desktop -->
+		<div class="nav-main-normal">
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<nav>
+				<div class="nav-dropdown">
+					<a href="#" class="nav-dropdown-main">SHOP</a>
+					<div class="nav-dropdown-shop">
+						<a href="tents.html" class="nav-dropdown-shop-link">Tents</a>
+						<a href="cookwares.html" class="nav-dropdown-shop-link">Cookwares</a>
 					</div>
+				</div>
+				<a href="contact.html">CONTACT</a>
+				<a href="about.html">ABOUT</a> 
+				<a href="cart.html" class="nav-cart">
+					<!-- <span class="nav-cart"></span> -->
+					<img src="sources/cart-black.png" id="menu-cart-img" onmouseover="navCartHover();" onmouseout="navCartNormalGen();" alt="Cart Icon">
+					(0)
+				</a>
+			</nav>
 
-		         	<input type="checkbox" id="css-toggle" name="css-toggle-menu"> 
-		         	
-			        <ul>
-		               <div class="dropdown"> 
-                   		<li><a href="shop.html">SHOP</a></li>
-                   		<div class="dropdown-content">
-                        	<a href="shop.html">Tents & Tarps</a>
-                        	<a href="cookware.html">Cookware</a>
-                  		</div></div>
-		               <li><a href="contact.html">CONTACT</a></li>
-		               <li><a href="about.html">ABOUT</a></li>
-		               <li><a href="cart.html"><span class="cart_icon"></span>&#8203;</a></li> 
-			        </ul>
+		</div>
 
-		         	<label for="css-toggle" id="css-toggle-menu">&#8203;
-		         		<span class="container" onclick="myFunction(this)">
-						 	<span class="bar1"></span>
-						  	<span class="bar2"></span>
-						  	<span class="bar3"></span>
-						</span>
-		         	</label>	          
-		        </nav>
-		   </nav>
-		</header>
+		<!-- Navigation Bar: Mobile -->
+		<div class="nav-mobile-normal">
 
-			  <div class="container-4">
-				  <div class="block">
-		             <a href="#">
-		              <img src="sources/location.jpg" style="width:100%"> </a>
-		          </div>
-			  </div>
+			<!-- Open Condensed Navigation Bar -->
+			<button onclick="navExpand();" id="nav-mobile-menu-open">MENU</button>
 
-			  <div class="container-3">
+			<button onclick="navClose();" id="nav-mobile-menu-close" class="nav-mobile-menu-close">CLOSE</button>
 
-					<div class="block_2">
-						<h1> Find Us </h1>
-					</div>
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" id="nav-logo-mobile-normal" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
 
-					<div class="block_3">
-						<ul type="1">
-				          <li>Monday     11 AM - 7 PM</li>
-				          <li>Tuesday    11 AM - 7 PM</li>
-				          <li>Wednesday  11 AM - 7 PM</li>
-				          <li>Thursday   11 AM - 7 PM</li>
-				          <li>Friday     11 AM - 7 PM</li>
-				          <li>Saturday   11 AM - 7 PM</li>
-				          <li>Sunday     11 AM - 5 PM</li>
-				        </ul>
-					</div>
-		      </div>
+			<!-- My Cart -->
+			<a href="cart.html">
+				<img class="nav-cart" id="menu-cart-img-mobile" src="sources/cart-black.png" alt="Cart Icon">
+				(0)
+			</a>
 
-			  <div class="container-3">
+		</div>
 
-					<div class="block_2">
-						<h1> Feedback </h1>
-					</div>
+		<!-- Condensed Navigation Bar -->
+		<div id="navMobileExpand" class="nav-mobile-expand">
 
-					<div class="block_3">
+			<a href="#" onclick="shopExpand();" class="nav-dropdown-main">SHOP</a>
+			
+			<a href="tents.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-tent">Tents</a>
+			<a href="cookwares.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-cookware">Cookwares</a>
+			
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			
+		</div>
 
-						<form>
-							<label for="name">Your Name:</label>
-							
-							<input type="text" id="name">
-							<br>
-							<label for="email">Email:</label>
-							<input type="text" id="email" placeholder="info@snowpeak.com">
-							<br>
-							<label for="number">Mobile Number:</label>
-							<input type="text" id="number" placeholder="1234 5678">
-							<br>
-							<label for="message">Message:</label>
-							<br>
-							<input type="text" id="message" placeholder="Write a message here...">
-						</form>
+	</header>
 
-						<a class="button-submit">Submit</a>
-						<!-- <h6>Vel pharetra vel turpis nunc eget lorem dolor. Dignissim enim sit amet venenatis urna cursus. Orci sagittis eu volutpat odio. Vitae congue eu consequat ac felis donec et. Ornare aenean euismod elementum nisi quis. Lacus luctus accumsan tortor posuere ac ut consequat semper. Amet volutpat consequat mauris nunc. Cras adipiscing enim eu turpis egestas. Diam vulputate ut pharetra sit amet. Maecenas ultricies mi eget mauris pharetra et ultrices neque ornare. Ipsum consequat nisl vel pretium lectus quam id leo. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper dignissim. Enim nec dui nunc mattis enim ut tellus. Magna etiam tempor orci eu lobortis elementum nibh tellus. Enim eu turpis egestas pretium. Neque volutpat ac tincidunt vitae semper. Pharetra massa massa ultricies mi quis hendrerit dolor magna eget. Aliquam nulla facilisi cras fermentum odio.</h6> -->
-					</div>
-		      </div>
+	<!-- Image holder -->
+	<div class="hero-banner">
 
-		<footer>
-		      <a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
-		      <a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
-		      <a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
-		      <h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
-  		</footer>
+		<!-- The Image -->
+		<img id="contact_image" src="sources/shop.jpg" alt="Stores">
 
-	</body>
+	</div>
 
+	<!-- Contact Information -->
+	<div id="contact-info">
+
+		<div class="contact-stores-title">
+
+			<h1>Stores</h1>
+		</div>
+
+		<div class="contact-stores-info">
+
+			<div class="location">
+				<h4>Portland Store</h4>
+				<h5>+1 503-223-1321</h5>
+				<h5>portland.store@trek.com</h5>
+				<h5>611 SW Kingston Ave, Portland, OR 97205, United States</h5>
+				
+				<ul>
+					<li>Monday 11 AM - 7 PM</li>
+					<li>Tuesday 11 AM - 7 PM</li>
+					<li>Wednesday 11 AM - 7 PM</li>
+					<li>Thursday 11 AM - 7 PM</li>
+					<li>Friday 11 AM - 7 PM</li>
+					<li>Saturday 11 AM - 7 PM</li>
+					<li>Sunday 11 AM - 5 PM</li>
+				</ul>
+			</div>    
+
+			<div class="location">
+				<h4>Vancouver Store</h4>
+				<h5>+1 778-772-9001</h5>
+				<h5>vancouver.store@trek.com</h5>
+				<h5>1100 Chestnut St, Vancouver, BC V6J 3J9, Canada</h5>
+		
+				<ul>
+					<li>Monday 11 AM - 7 PM</li>
+					<li>Tuesday 11 AM - 7 PM</li>
+					<li>Wednesday 11 AM - 7 PM</li>
+					<li>Thursday 11 AM - 7 PM</li>
+					<li>Friday 11 AM - 7 PM</li>
+					<li>Saturday 11 AM - 7 PM</li>
+					<li>Sunday 11 AM - 5 PM</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+	
+	<!-- Contact Form -->
+	<div id="contact-input">
+
+		<div class="contact-stores-title">
+			<h1>Feedback</h1>
+		</div>
+
+		<div class="contact-feedback">
+			<form class="contact-form">
+				<label for="name">Your Name:</label>
+
+				<input type="text" id="name" placeholder="Name">
+
+				<label for="email">Email:</label>
+				<input type="text" id="email" placeholder="info@trek.com">
+
+				<label for="number">Mobile Number:</label>
+				<input type="text" id="number" placeholder="1234 5678">
+
+				<label for="message">Message:</label>
+
+				<input type="text" id="message" placeholder="Write a message here...">
+
+				<a class="button-submit">Submit</a>
+				
+			</form>
+
+		</div>
+	</div>
+
+	<footer>
+		<a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+		<a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+		<a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+		<h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+	</footer>
+	
+</body>
 </html>

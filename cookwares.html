@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<title>Trek: Shop Cookwares</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Linking with CSS files --> 
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Top Bar -->
+	<header>
+
+		<!-- Event Bar -->
+		<div class="event-bar">
+			<span class="event-text">SALES! 40% OFF for Selected Camping Products 
+				<span class="event-link">
+					<a href="event.html">Shop Now</a>
+				</span>
+			</span>
+		</div>
+
+		<!-- Navigation Bar: Desktop -->
+		<div class="nav-main-normal">
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<nav>
+				<div class="nav-dropdown">
+					<a href="#" class="nav-dropdown-main">SHOP</a>
+					<div class="nav-dropdown-shop">
+						<a href="tents.html" class="nav-dropdown-shop-link">Tents</a>
+						<a href="cookwares.html" class="nav-dropdown-shop-link">Cookwares</a>
+					</div>
+				</div>
+				<a href="contact.html">CONTACT</a>
+				<a href="about.html">ABOUT</a> 
+				<a href="cart.html" class="nav-cart">
+					<!-- <span class="nav-cart"></span> -->
+					<img src="sources/cart-black.png" id="menu-cart-img" onmouseover="navCartHover();" onmouseout="navCartNormalGen();" alt="Cart Icon">
+					(0)
+				</a>
+			</nav>
+
+		</div>
+
+		<!-- Navigation Bar: Mobile -->
+		<div class="nav-mobile-normal">
+
+			<!-- Open Condensed Navigation Bar -->
+			<button onclick="navExpand();" id="nav-mobile-menu-open">MENU</button>
+
+			<button onclick="navClose();" id="nav-mobile-menu-close" class="nav-mobile-menu-close">CLOSE</button>
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" id="nav-logo-mobile-normal" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<!-- My Cart -->
+			<a href="cart.html">
+				<img class="nav-cart" id="menu-cart-img-mobile" src="sources/cart-black.png" alt="Cart Icon">
+				(0)
+			</a>
+
+		</div>
+
+		<!-- Condensed Navigation Bar -->
+		<div id="navMobileExpand" class="nav-mobile-expand">
+
+			<a href="#" onclick="shopExpand();" class="nav-dropdown-main">SHOP</a>
+			
+			<a href="tents.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-tent">Tents</a>
+			<a href="cookwares.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-cookware">Cookwares</a>
+			
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			
+		</div>
+
+	</header>
+
+	<div class="container">
+
+		<h1>Cookwares</h1>
+		<div class="plp-container">
+
+			<!-- Cookware Product 1 -->
+			<div class="plp-product">
+
+				<a href="pdp-cookware.html">
+					<img src="sources/kettle.jpg" alt="Product-Cookware">
+				</a>
+
+				<h5 class="tag-sales">ON SALE</h5>
+
+				<div class="plp-name">
+					<h4>FIELD BARISTA KETTLE</h4>
+
+					<div class="plp-price">
+						<h6>$130</h6>
+						<h5>$78</h5>
+					</div>
+				</div>
+
+				<a href="cart.html" class="in-text">add to cart</a>
+
+			</div>
+
+			<!-- Cookware Product 2 -->
+			<div class="plp-product">
+
+				<a href="pdp-cookware.html">
+					<img src="sources/drip.jpg" alt="Product-Cookware">
+				</a>
+
+				<div class="plp-name">
+					<h4>FIELD BARISTA COFFEE DRIP</h4>
+
+					<div class="plp-price">
+						<h5>$60</h5>
+					</div>
+				</div>
+
+				<a href="cart.html" class="in-text">add to cart</a>
+
+			</div>
+
+			<!-- Cookware Product 3 -->
+			<div class="plp-product">
+
+				<a href="pdp-cookware.html">
+					<img src="sources/grinder.jpg" alt="Product-Cookware">
+				</a>
+
+				<h5 class="tag-no-stock">OUT OF STOCK</h5>
+
+				<div class="plp-name">
+					<h4>FIELD BARISTA COFFEE GRINDER</h4>
+
+					<div class="plp-price">
+						<h5>$90</h5>
+					</div>
+				</div>
+
+				<!-- <a href="cart.html" class="in-text">add to cart</a> -->
+
+			</div>
+
+			<!-- Cookware Product 4 -->
+			<div class="plp-product">
+
+				<a href="pdp-cookware.html">
+					<img src="sources/cast.jpg" alt="Product-Cookware">
+				</a>
+
+				<div class="plp-name">
+					<h4>CAST IRON OVEN 26CM</h4>
+
+					<div class="plp-price">
+						<h5>$100</h5>
+					</div>
+				</div>
+
+				<a href="cart.html" class="in-text">add to cart</a>
+
+			</div>
+
+			<!-- Cookware Product 5 -->
+			<div class="plp-product">
+
+				<a href="pdp-cookware.html">
+					<img src="sources/tram.jpg" alt="Product-Cookware">
+				</a>
+
+				<div class="plp-name">
+					<h4>TRAMEZZINO</h4>
+
+					<div class="plp-price">
+						<h5>$120</h5>
+					</div>
+				</div>
+
+				<a href="cart.html" class="in-text">add to cart</a>
+
+			</div>
+
+			<!-- Cookware Product 6 -->
+			<div class="plp-product">
+
+				<a href="pdp-cookware.html">
+					<img src="sources/capsule.jpg" alt="Product-Cookware">
+				</a>
+
+				<div class="plp-name">
+					<h4>MICRO CAPSULE, CAST IRON OVEN</h4>
+
+					<div class="plp-price">
+						<h5>$85</h5>
+					</div>
+				</div>
+
+				<a href="cart.html" class="in-text">add to cart</a>
+
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+		<a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+		<a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+		<h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+	</footer>
+	
+</body>
+</html>

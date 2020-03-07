@@ -1,0 +1,472 @@
+/*General Adjustments*/
+
+/*Responsive Element is missing*/
+*{
+
+}
+
+body{
+	margin:0;
+}
+
+section:not([id]) {
+  margin-bottom: 3rem;
+  padding: 0.5em 0;
+  border-top: 1px solid #5c5c3d;
+}
+
+/*Style Guide CSS*/
+.page_top{
+	margin: 1rem;
+}
+
+/*Interactive Elements*/
+.interactive_elements, .combined_elements{
+	margin: 1rem;
+}
+
+.button_back{
+  font-family: "BrandonGrotesque-Light";
+  display: inline-block;
+  background-color: #bfa077;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.4rem 5rem;
+  margin-top: 1rem;
+}
+
+.button-submit:hover{
+  color:white;
+  background-color:#99835d;
+}
+
+.button-submit:active {
+  background-color: #99835d;
+}
+
+/*In-text Link*/ 
+.in-text_link{
+	color: #bfa87b;
+	text-decoration: none;
+  width: 100%;
+}
+
+.in-text_link:hover{
+	color:#bfa077;
+  text-decoration: underline;
+}
+
+/*Navigation Button*/
+.button_nav{
+	background-color: white;
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.25rem 2.5rem;
+  border: 1px solid black;
+  letter-spacing: 0.25rem;
+}
+
+.button_nav:hover{
+  background-color: BLACK ;
+  color: WHITE;
+  transition: 0.5s;
+}
+
+/*Submit Button*/
+.button_submit{
+	display: inline-block;
+  background-color: #bfa077;
+  font-size: 0.75rem;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.25rem 1.25rem;
+  letter-spacing: 0.25rem;
+}
+
+.button_submit:hover{
+	color: white;
+	background-color: #99835d;
+}
+
+.button_submit:active{
+	background-color: #99835d;
+}
+
+/*Text Input Field*/
+label{
+	display: inline-block;
+	font-size: 0.75rem;
+	width: 100%;
+	line-height: 1.25rem;
+}
+
+.text_input{
+	display: inline-block;
+	border: none;
+ border-bottom: 0.2rem solid #7a5f37;
+ width: 20%;
+}
+
+/*Text Elements*/
+.text_elements{
+	margin: 1rem;
+}
+
+/*Headings*/
+h1{
+	font-size: 2.5rem;
+	margin-bottom: 0.75rem;
+	font-family: "Didot";
+}
+
+h3{
+	font-family: "Didot";
+	font-style: normal;
+	letter-spacing: 0.1rem;
+}
+
+h4{
+	font-size: 1rem;
+	font-family: "BrandonGrotesque-Light";
+}
+
+/*Paragraphs*/
+p{
+	font-size: 0.75rem;
+	width: 100%;
+	line-height: 1.25rem;
+	margin-top: 0;
+}
+
+/*Bulleted Lists*/
+ul, li{
+	font-family:"BrandonGrotesque-Light";
+}
+
+ul{
+	/*list-style-type: none;*/
+ /*float: left;*/
+ text-align: left;
+ font-size: 15px;
+ line-height: 30px;
+ letter-spacing: 0.2rem;
+ /*margin-top: 2rem;*/
+ /*margin-right: 3rem;*/
+ /*padding:2rem;*/
+
+ /*Flex is required*/
+ width: 50%;
+}
+
+/*Combined Elements*/
+.combine_elements{
+	margin: 1rem;
+}
+
+/*Navigation Bar*/
+.nav-main{
+  display: flex;
+  width: 100%;
+  background-color: transparent;
+
+  /*Stick to the top while user scroll, Reference: https://www.w3schools.com/howto/howto_css_sticky_element.asp*/
+  top: 1.3rem;
+  /*Stacking Order, Reference: https://www.w3schools.com/cssref/pr_pos_z-index.asp;*/
+  z-index: 1;
+}
+
+/*Navigation Bar: Logo*/
+.nav-logo{
+  width: 130px;
+  margin: 1rem 3rem;
+}
+
+/*Navigation Bar: Links*/
+.nav-main nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-right: 3rem;
+}
+
+.nav-main nav a{
+  display: inline;
+
+  font-family: "BrandonGrotesque-Light", sans-serif;
+  font-size: 0.8rem;
+
+  color: black;
+  text-decoration: none;
+  margin:0rem 4.5rem;
+  padding:1rem 0rem;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.nav-main nav a:hover{
+  color: #bfa077;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+#menu-cart-img, #menu-cart-img-mobile{
+  /*content: url('../sources/cart-white.png');*/
+  width: 1rem;
+}
+
+.nav-main nav a.nav-cart{
+  transition:all 0s;
+  -webkit-transition: all 0s;
+}
+
+/*Navigation Bar: Dropdown Menu (Desktop)*/
+.nav-dropdown{
+  position: relative;
+  display: inline-block;
+  margin: 1rem 4.5rem;
+}
+
+.nav-main a.nav-dropdown-main{
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.nav-dropdown-shop{
+  visibility: hidden;
+  height:0;
+  opacity: 0;
+
+  position: absolute;
+  background-color: #FFF;
+  min-width: 10rem;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color:black;
+}
+
+/* Links inside the dropdown */
+.nav-main nav div.nav-dropdown-shop a{
+  color: black;
+  font-size: 0.8rem;
+  margin:1rem;
+  padding:0;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.nav-main nav div.nav-dropdown-shop a:hover{
+  color: #bfa077;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+/*Show the dropdown menu on hover*/
+.nav-dropdown:hover .nav-dropdown-shop{
+  visibility: visible;
+  height: auto;
+  opacity:1;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/*Navigation Bar: Normal White Background*/
+.nav-main-normal{
+  display: flex;
+  width: 100%;
+  background-color: white;
+
+  /*Stick to the top while user scroll, Reference: https://www.w3schools.com/howto/howto_css_sticky_element.asp*/
+  top: 1.3rem;
+  /*Stacking Order, Reference: https://www.w3schools.com/cssref/pr_pos_z-index.asp;*/
+  z-index: 1;
+}
+
+/*Navigation Bar: Links*/
+.nav-main-normal nav{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+  margin-right: 3rem;
+}
+
+.nav-main-normal nav a{
+  display: inline;
+
+  font-family: "BrandonGrotesque-Light", sans-serif;
+  font-size: 0.8rem;
+
+  color: black;
+  text-decoration: none;
+  margin:0rem 4.5rem;
+  padding:1rem 0rem;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.nav-main-normal nav a:hover{
+  color: #bfa077;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+.nav-main-normal a.nav-dropdown-main{
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+/* Links inside the dropdown */
+.nav-main-normal nav div.nav-dropdown-shop a{
+  color: black;
+  font-size: 0.8rem;
+  margin:1rem;
+  padding:0;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.nav-main-normal nav div.nav-dropdown-shop a:hover{
+  color: #bfa077;
+
+  -webkit-transition: color 0.2s linear;
+  transition: color 0.2s linear;
+}
+
+/**/
+
+/*Navigation Bar: Mobile*/
+.nav-mobile{
+  display:none;
+}
+
+.nav-mobile-expand{
+  display:none;
+}
+
+.nav-mobile-normal{
+  display:none;
+}
+
+/*Background color for the sample code*/
+section code{
+  background-color:#faf7f0;
+  color:black;
+  display: block;
+  width:70%;
+  padding:1%;
+}
+
+/*Product Listing*/
+.listing_container{
+	display: inline-flex;
+ align-items: center;
+ flex-wrap: wrap;
+ flex-direction: row;
+}
+
+.listing_container div{
+	border: none;
+ padding: 2%;
+}
+
+.listing_container img{
+	opacity: 1;
+}
+
+.listing_container img:hover {
+ opacity: 0.8;
+}
+
+.listing_block{
+	flex-grow: 1;
+ flex-basis: 350px;
+}
+
+.listing_block h4{
+	float: left;
+  font-size: 0.75rem;
+}
+
+.listing_block h5{
+	font-family: "BrandonGrotesque-Light";
+ float: right;
+ text-align: right;
+ font-size:  0.875rem;
+ line-height: 1px;
+ display:inline-block;
+}
+
+.listing_container a{
+	float: right;
+ text-align: right;
+ font-size: 15px;
+ line-height: 1px;
+}
+
+/**************************************************** GRID IN STYLEGUIDE *************************************************/
+
+.flex-item{
+  background-color: black;
+  color: white;
+  flex: 1 1 auto;
+  margin: 20px;
+  padding-top: 100px;
+}
+
+.flex-grid-1{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+/**************************************************** COLOR IN STYLEGUIDE *************************************************/
+
+
+.color-main-item {
+  display: inline-block;
+  color: white;
+  background-color:#bfa87b;
+  font-size: 1.2rem;
+  padding: 0.25rem 0.5rem;
+  text-decoration: none;
+  letter-spacing: 3px;
+}
+
+.bg1 {
+  background-color: #5c5c5c;
+}
+
+.bg2 {
+  background-color: #000000;
+}
+
+.bg3 {
+  color:#000000;
+  background-color: #ffffff;
+}
+
+.bg4 {
+  color:#000000;
+  background-color: #faf7f0;
+}
+
+.color-main-item:active, .color-main-item:hover, .color-main-item:focus {
+  font-size: 1.5rem;
+}

@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+	<title>Trek: Checkout</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Linking with CSS files --> 
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+
+</head>
+
+<body>
+
+	<!-- Top Bar -->
+	<header>
+
+		<!-- Event Bar -->
+		<div class="event-bar">
+			<span class="event-text">SALES! 40% OFF for Selected Camping Products 
+				<span class="event-link">
+					<a href="event.html">Shop Now</a>
+				</span>
+			</span>
+		</div>
+
+		<!-- Navigation Bar: Desktop -->
+		<div class="nav-main-normal">
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<nav>
+				<div class="nav-dropdown">
+					<a href="#" class="nav-dropdown-main">SHOP</a>
+					<div class="nav-dropdown-shop">
+						<a href="tents.html" class="nav-dropdown-shop-link">Tents</a>
+						<a href="cookwares.html" class="nav-dropdown-shop-link">Cookwares</a>
+					</div>
+				</div>
+				<a href="contact.html">CONTACT</a>
+				<a href="about.html">ABOUT</a> 
+				<a href="cart.html" class="nav-cart">
+					<!-- <span class="nav-cart"></span> -->
+					<img src="sources/cart-black.png" id="menu-cart-img" onmouseover="navCartHover();" onmouseout="navCartNormalGen();" alt="Cart Icon">
+					(0)
+				</a>
+			</nav>
+
+		</div>
+
+		<!-- Navigation Bar: Mobile -->
+		<div class="nav-mobile-normal">
+
+			<!-- Open Condensed Navigation Bar -->
+			<button onclick="navExpand();" id="nav-mobile-menu-open">MENU</button>
+
+			<button onclick="navClose();" id="nav-mobile-menu-close" class="nav-mobile-menu-close">CLOSE</button>
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" id="nav-logo-mobile-normal" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<!-- My Cart -->
+			<a href="cart.html">
+				<img class="nav-cart" id="menu-cart-img-mobile" src="sources/cart-black.png" alt="Cart Icon">
+				(0)
+			</a>
+
+		</div>
+
+		<!-- Condensed Navigation Bar -->
+		<div id="navMobileExpand" class="nav-mobile-expand">
+
+			<a href="#" onclick="shopExpand();" class="nav-dropdown-main">SHOP</a>
+			
+			<a href="tents.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-tent">Tents</a>
+			<a href="cookwares.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-cookware">Cookwares</a>
+			
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			
+		</div>
+
+	</header>
+
+	<div class="container">
+
+		<h1>Reviewing Your Order</h1>
+		<p>By placing your order, you agree to Trek's privacy notice and conditions of use.</p>
+
+		<!-- flex container -->
+		<div class="cart-container">
+
+			<!-- Showing the details of products purchased -->
+			<div class="cart-listing-place">
+
+				<!-- Row of Subheadings -->
+				<div class="cart-listing-row">
+
+					<h4 class="cart-title">Your Shipping Address</h4>
+
+					<form>
+
+						<!-- First Name -->
+						<div class="first-name">
+							<label for="first-name">First Name</label>
+							<input id="first-name" type="text">
+						</div>
+
+						<!-- Last Name -->
+						<div class="last-name">
+							<label for="last-name">Last Name</label>
+							<input id="last-name" type="text">
+						</div>
+
+						<!-- Address Line 1 -->
+						<div class="address-line-1">
+							<label for="address-line-1">Address Line 1</label>
+							<input id="address-line-1" type="text">
+						</div>
+
+						<!-- Address Line 2 -->
+						<div class="address-line-2">
+							<label for="address-line-2">Address Line 2</label>
+							<input id="address-line-2" type="text">
+						</div>
+
+						<!-- City -->
+						<div class="city">
+							<label for="city">City</label>
+							<input id="city" type="text">
+						</div>
+
+						<!-- State -->
+						<div class="state">
+							<label for="state">State</label>
+							<select id="state" name="state">
+
+								<option value="Alberta">Alberta</option>
+								<option value="British Columbia">British Columbia</option>
+								<option value="Ontario">Ontario</option>
+
+							</select>
+						</div>
+
+						<!-- Zip -->
+						<div class="zip">
+							<label for="zip">ZIP Code</label>
+							<input id="zip" type="text" maxlength="6">
+						</div>
+
+						<!-- Mobile Number -->
+						<div class="mobile-number">
+							<label for="mobile-number">Mobile Number</label>
+							<input id="mobile-number" type="tel" maxlength="10">
+						</div>
+
+					</form>
+
+				</div>
+
+				<!-- Payment Methods -->
+				<div class="cart-listing-row">
+
+					<h4 class="cart-title">Payment Method</h4>
+
+					<form>
+
+						<!-- Name on Card -->
+						<div class="name-on-card">
+							<label for="name-on-card">Name on Card</label>
+							<input id="name-on-card" type="text">
+						</div>
+
+						<!-- Card Number -->
+						<div class="card-number">
+							<label for="card-number">Card Number</label>
+							<input id="card-number" type="password" maxlength="16">
+						</div>
+
+						<!-- Expiration -->
+						<div class="expiration">
+							<label for="expiration">Expiration</label>
+
+							<div class="expiration-field">
+								<input id="expiration" type="password" maxlength="2" placeholder="mm">
+								<input id="expiration-yy" type="password" maxlength="4" placeholder="yyyy">
+							</div>
+						</div>
+
+
+						<!-- CVV -->
+						<div class="cvv">
+							<label for="cvv">CVV</label>
+							<input id="cvv" type="password" maxlength="3">
+						</div>
+
+					</form>
+				</div>
+
+				
+
+				<div class="order-overview">
+					<div class="cart-listing-row">
+
+						<h4 class="cart-title">Order Overview</h4>
+
+					</div>
+
+					<div class="cart-listing-row">
+
+						<h5 class="cart-product">Product</h5>
+						<h5 class="cart-details">Price</h5>
+						<h5 class="cart-details">Quantity</h5>
+						<h5 class="cart-details">Subtotal</h5>
+
+					</div>
+
+					<!-- Row of Product -->
+					<div class="cart-listing-row">
+
+						<!-- Product Imange and Name -->
+						<div class="cart-product">
+
+							<img src="sources/camp1.jpg" alt="Camping Product">
+							<h5>Living Shell Long Ivory</h5>
+
+						</div>
+
+						<!-- Price -->
+						<div class="cart-details">
+
+							<h6>$1,790</h6>
+							<h5>$1,024</h5>
+
+						</div>
+
+						<!-- Quantity -->
+						<h5 class="cart-details">1</h5>
+
+						<!-- Subtotal -->
+						<h5>$1,024</h5>
+
+						<!-- </div> -->
+
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Showing the total amount user has to pay -->
+			<div class="cart-checkout-sum">
+
+				<!-- Order Summary -->
+				<div class="cart-order-summary">
+
+					<!-- Total Items Ordered -->
+					<div class="cart-checkout-row">
+
+						<h3>Total Items</h3>
+						<h3>1</h3>
+
+					</div>
+
+					<!-- Subtotal User has to pay -->
+					<div class="cart-checkout-row">
+
+						<h3>Subtotal</h3>
+						<h3>CAD$1,024</h3>
+
+					</div>
+
+					<!-- Delivery Fee -->
+					<div class="cart-checkout-row">
+
+						<p>Delivery</p>
+						<p>+ CAD$100</p>
+
+					</div>
+
+				</div>
+
+				<!-- Total Amount Have to Pay -->
+				<div class="cart-order-total">
+
+					<div class="cart-checkout-row">
+
+						<h3>Order Total</h3>
+						<h3>CAD$1,124</h3>
+
+					</div>
+
+				</div>
+
+				<div class="cart-order-button">
+
+					<a href="checkout.html" class="button-black-border">Place Your Order</a>
+
+				</div>
+
+			</div>
+
+			<!-- </div> -->
+
+		</div>
+
+	</div>
+
+	<footer>
+		<a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+		<a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+		<a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+		<h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+	</footer>
+
+</body>
+</html>

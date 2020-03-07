@@ -1,116 +1,206 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<title>IAT399 - P02</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   		<link href="css/main.css" rel="stylesheet">
-   		<link href="css/nav.css" rel="stylesheet">
-   		<link href="css/grid.css" rel="stylesheet">
-	</head>
+<head>
 
-	<body>
+	<title>Trek: My Cart</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!--Navigation Bar-->
-		<header>
-			<nav class="navBar">
-			
-				<p class="eventBar">
-					<span class="eventText">SALES! 40% OFF for Selected Camping Products</span>
-					<span class="eventLink"><a href="event.html">Shop Now</a></span>
-				</p>
+	<!-- Linking with CSS files --> 
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-				<nav class="wrapper">
+	<script src="js/main.js"></script>
 
-					<div class="logo">
-						<a href="index.html" class="nav-logo"></a>
-					</div>
+</head>
 
-		         	<input type="checkbox" id="css-toggle" name="css-toggle-menu"> 
-		         	
-			        <ul>
-		               <div class="dropdown"> 
-                   		<li><a href="shop.html">SHOP</a></li>
-                   		<div class="dropdown-content">
-                        	<a href="shop.html">Tents & Tarps</a>
-                        	<a href="cookware.html">Cookware</a>
-                  		</div></div>
-		               <li><a href="contact.html">CONTACT</a></li>
-		               <li><a href="about.html">ABOUT</a></li>
-		               <li><a href="cart.html"><span class="cart_icon"></span>&#8203;</a></li> 
-			        </ul>
+<body>
 
-		         	<label for="css-toggle" id="css-toggle-menu">&#8203;
-		         		<span class="container" onclick="myFunction(this)">
-						 	<span class="bar1"></span>
-						  	<span class="bar2"></span>
-						  	<span class="bar3"></span>
-						</span>
-		         	</label>	          
-		        </nav>
-		   </nav>
-		</header>
+	<!-- Top Bar -->
+	<header>
 
-		<div class="myCart-title">
-			<h1>My Cart</h1>
+		<!-- Event Bar -->
+		<div class="event-bar">
+			<span class="event-text">SALES! 40% OFF for Selected Camping Products 
+				<span class="event-link">
+					<a href="event.html">Shop Now</a>
+				</span>
+			</span>
 		</div>
 
-		<div class="list-of-purchased">
+		<!-- Navigation Bar: Desktop -->
+		<div class="nav-main-normal">
 
-			<div class="cart-row">
-				<h5 class="cart-product">Product</h5>
-				<h5 class="cart-others">Price</h5>
-				<h5 class="cart-others">Quantity</h5>
-				<h5 class="cart-others">Subtotal</h5>
-			</div>
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
 
-			<div class="cart-row">
+			<nav>
+				<div class="nav-dropdown">
+					<a href="#" class="nav-dropdown-main">SHOP</a>
+					<div class="nav-dropdown-shop">
+						<a href="tents.html" class="nav-dropdown-shop-link">Tents</a>
+						<a href="cookwares.html" class="nav-dropdown-shop-link">Cookwares</a>
+					</div>
+				</div>
+				<a href="contact.html">CONTACT</a>
+				<a href="about.html">ABOUT</a> 
+				<a href="cart.html" class="nav-cart">
+					<!-- <span class="nav-cart"></span> -->
+					<img src="sources/cart-black.png" id="menu-cart-img" onmouseover="navCartHover();" onmouseout="navCartNormalGen();" alt="Cart Icon">
+					(0)
+				</a>
+			</nav>
 
-				<div class="cart-product">
-					<img src="sources/camp1.jpg" alt="camp1" width="30%">
-					<h5 class="cart-product-title">Living Shell Long Pro Ivory</h5>
+		</div>
+
+		<!-- Navigation Bar: Mobile -->
+		<div class="nav-mobile-normal">
+
+			<!-- Open Condensed Navigation Bar -->
+			<button onclick="navExpand();" id="nav-mobile-menu-open">MENU</button>
+
+			<button onclick="navClose();" id="nav-mobile-menu-close" class="nav-mobile-menu-close">CLOSE</button>
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" id="nav-logo-mobile-normal" src="sources/logo.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<!-- My Cart -->
+			<a href="cart.html">
+				<img class="nav-cart" id="menu-cart-img-mobile" src="sources/cart-black.png" alt="Cart Icon">
+				(0)
+			</a>
+
+		</div>
+
+		<!-- Condensed Navigation Bar -->
+		<div id="navMobileExpand" class="nav-mobile-expand">
+
+			<a href="#" onclick="shopExpand();" class="nav-dropdown-main">SHOP</a>
+			
+			<a href="tents.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-tent">Tents</a>
+			<a href="cookwares.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-cookware">Cookwares</a>
+			
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			
+		</div>
+
+	</header>
+
+	<div class="container">
+
+		<h1>My Cart</h1>
+
+		<!-- flex container -->
+		<div class="cart-container">
+
+			<!-- Showing the details of products purchased -->
+			<div class="cart-listing">
+
+				<!-- Row of Subheadings -->
+				<div class="cart-listing-row">
+					<h5 class="cart-product">Product</h5>
+					<h5 class="cart-details">Price</h5>
+					<h5 class="cart-details">Quantity</h5>
+					<h5 class="cart-details">Subtotal</h5>
 				</div>
 
-				<h5 class="cart-others-details">$1,790</h5>
-				<h5 class="cart-others-details">1</h5>
-				<h5 class="cart-others-details">$1,790</h5>
+				<!-- Row of Product -->
+				<div class="cart-listing-row">
+
+					<!-- Product Imange and Name -->
+					<div class="cart-product">
+
+						<img src="sources/camp1.jpg" alt="Camping Product">
+						<h5>Living Shell Long Ivory</h5>
+
+					</div>
+
+					<!-- Price -->
+					<div class="cart-details">
+
+						<h6>$1,790</h6>
+						<h5>$1,024</h5>
+
+					</div>
+
+					<!-- Quantity -->
+					<h5 class="cart-details">1</h5>
+
+					<!-- Subtotal -->
+					<h5>$1,024</h5>
+
+				</div>
+
+			</div>
+
+			<!-- Showing the total amount user has to pay -->
+			<div class="cart-checkout-sum">
+
+				<!-- Order Summary -->
+				<div class="cart-order-summary">
+
+					<!-- Total Items Ordered -->
+					<div class="cart-checkout-row">
+
+						<h3>Total Items</h3>
+						<h3>1</h3>
+
+					</div>
+
+					<!-- Subtotal User has to pay -->
+					<div class="cart-checkout-row">
+
+						<h3>Subtotal</h3>
+						<h3>CAD$1,024</h3>
+
+					</div>
+
+					<!-- Delivery Fee -->
+					<div class="cart-checkout-row">
+
+						<p>Delivery</p>
+						<p>+ CAD$100</p>
+
+					</div>
+
+				</div>
+
+				<!-- Total Amount Have to Pay -->
+				<div class="cart-order-total">
+
+					<div class="cart-checkout-row">
+
+						<h3>Order Total</h3>
+						<h3>CAD$1,124</h3>
+
+					</div>
+
+				</div>
+
+				<div class="cart-order-button">
+
+					<a href="checkout.html" class="button-black-border">Check Out</a>
+
+				</div>
 
 			</div>
 
 		</div>
 
-		<div class="order-box">
+	</div>
 
-			<div class="order-details">
-				<h3 class="order-left">Total Items</h3>
-				<h3 class="order-right">1</h3>
-				<h3 class="order-left">Subtotal</h3>
-				<h3 class="order-right">CA$1,790</h3>
-				<p class="order-left">Delivery</p>
-				<p class="order-right">+ CA$100</p>
-			</div>
-
-			<div class="order-final">
-				<h3 class="order-left">Order Total</h3>
-				<h3 class="order-right">CA$1,890</h3>
-			</div>
-
-			<div class="order-button">
-				<a href="" class="check-out-button">Check Out</a>
-			</div>
-
-		</div>
-
-
-
-
-       	<footer>
-		      <a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
-		      <a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
-		      <a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
-		      <h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
-  		</footer>
-
-	</body>
-	</html>
+	<footer>
+		<a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+		<a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+		<a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+		<h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+	</footer>
+	
+</body>
+</html>

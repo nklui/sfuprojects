@@ -1,97 +1,149 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<title>IAT399 - P02</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-   		<link href="css/main.css" rel="stylesheet">
-   		<link href="css/nav.css" rel="stylesheet">
-   		<link href="css/grid.css" rel="stylesheet">
-	</head>
+<head>
 
-	<body>
+	<title>TREK: Camping with Quality</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<!--Navigation Bar-->
-		<header>
-			<nav class="navBar">
+	<!-- Linking with CSS files --> 
+	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-				<p class="eventBar">
-					<span class="eventText">SALES! 40% OFF for Selected Camping Products</span>
-					<span class="eventLink"><a href="event.html">Shop Now</a></span>
-				</p>
+	<script src="js/main.js"></script>
 
-				<nav class="wrapper">
+</head>
 
-					<div class="logo">
-						<a href="index.html" class="nav-logo"></a>
+<body>
+
+	<!-- Top Bar -->
+	<header>
+
+		<!-- Event Bar -->
+		<div class="event-bar">
+			<span class="event-text">SALES! 40% OFF for Selected Camping Products 
+				<span class="event-link">
+					<a href="event.html">Shop Now</a>
+				</span>
+			</span>
+		</div>
+
+		<!-- Navigation Bar: Desktop -->
+		<div class="nav-main">
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" src="sources/logo-white.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<nav>
+				<div class="nav-dropdown">
+					<a href="#" class="nav-dropdown-main">SHOP</a>
+					<div class="nav-dropdown-shop">
+						<a href="tents.html" class="nav-dropdown-shop-link">Tents</a>
+						<a href="cookwares.html" class="nav-dropdown-shop-link">Cookwares</a>
 					</div>
+				</div>
+				<a href="contact.html">CONTACT</a>
+				<a href="about.html">ABOUT</a> 
+				<a href="cart.html" class="nav-cart">
+					<!-- <span class="nav-cart"></span> -->
+					<img src="sources/cart-white.png" id="menu-cart-img" onmouseover="navCartHover();" onmouseout="navCartNormal();" alt="Cart Icon">
+					(0)
+				</a>
+			</nav>
 
-		         	<input type="checkbox" id="css-toggle" name="css-toggle-menu"> 
-		         	
-			        <ul>
-			           <div class="dropdown"> 
-		               <li><a href="shop.html">SHOP</a></li>
-		               <div class="dropdown-content">
-		               	    <a href="shop.html">Tents & Tarps</a>
-						    <a href="cookware.html">Cookware</a>
-					   </div></div>
+		</div>
 
-		               <li><a href="contact.html">CONTACT</a></li>
-		               <li><a href="about.html">ABOUT</a></li>
-		               <li><a href="cart.html"><span class="cart_icon"></span>&#8203;</a></li> 
-			        </ul>
+		<!-- Navigation Bar: Mobile -->
+		<div class="nav-mobile" id="nav-mobile">
 
-		         	<label for="css-toggle" id="css-toggle-menu">&#8203;
-		         		<span class="container" onclick="myFunction(this)">
-						 	<span class="bar1"></span>
-						  	<span class="bar2"></span>
-						  	<span class="bar3"></span>
-						</span>
-		         	</label>	          
-		        </nav>
-		   </nav>
-		</header>
+			<!-- Open Condensed Navigation Bar -->
+			<button onclick="navExpand();" id="nav-mobile-menu-open">MENU</button>
 
-		<div class="container-4">
-				<video controls autoplay loop muted style="width:100%">
-				  <source src="sources/promotion.mp4" type="video/mp4">
-				  <source src="sources/promotion.ogg" type="video/ogg">
-				  Your browser does not support the video tag.
+			<button onclick="navClose();" id="nav-mobile-menu-close" class="nav-mobile-menu-close">CLOSE</button>
+
+			<!-- Logo -->
+			<a href="index.html">
+				<img class="nav-logo" id="nav-logo-mobile" src="sources/logo-white.png" alt="Logo of the Company - Trek">
+			</a>
+
+			<!-- My Cart -->
+			<a href="cart.html" id="menu-cart-mobile">
+				<img class="nav-cart" id="menu-cart-img-mobile" src="sources/cart-white.png" alt="Cart Icon">
+				(0)
+			</a>
+
+		</div>
+
+		<!-- Condensed Navigation Bar -->
+		<div id="navMobileExpand" class="nav-mobile-expand">
+
+			<a href="#" onclick="shopExpand();" class="nav-dropdown-main">SHOP</a>
+			
+			<a href="tents.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-tent">Tents</a>
+			<a href="cookwares.html" class="nav-dropdown-shop-link" id="nav-dropdown-shop-link-cookware">Cookwares</a>
+			
+			<a href="contact.html">CONTACT</a>
+			<a href="about.html">ABOUT</a>
+			
+		</div>
+
+	</header>
+
+	<!-- Video Hero Banner -->
+	<div class="hero-banner">
+
+		<!-- The Video -->
+		<video controls autoplay loop muted id="home-video">
+			<source src="sources/promotion.mp4" type="video/mp4">
+				<source src="sources/promotion.ogg" type="video/ogg">
+					Your browser does not support the video tag.
 				</video>
 
-				<h4>snow peak present:</h4>
-				<h1>Camping with Quality</h1>
-				<a href="shop.html" class="button-3-1">Shop</a>
-      </div>
+				<!-- The Content overlayed -->
+				<div class="hero-banner-content">
+					<h4>Trek presents:</h4>
+					<h1>Camping with Quality</h1>
+					<a href="#category" class="button-white-border">Shop</a>
+				</div>
 
-      <div class="container">
-		  <div class="block_6">
-              <a href="shop.html">
-              <img src="sources/tent.jpg" style="width:100%"> </a>
-              <h4>Tents & Tarps</h4>
-          </div>
+			</div>
 
-          <div class="block_7">
-             <a href="cookware.html">
-              <img src="sources/cooking.jpg" style="width:100%"> </a>
-              <h4>Cookware</h4>
-          </div>
+			<!-- Shopping Categories -->
+			<div id="category">
 
-          <div class="block_8">
-             <a href="event.html">
-              <img src="sources/hammi.jpg" style="width:100%"> </a>
-              <h4>Sale</h4>
-          </div>
-      </div>
+				<!-- Tents -->
+				<div class="home-tent">
+					<a href="tents.html">
+						<img src="sources/tents.png" alt="Image of Tents">
+					</a>
+				</div>
 
-       	<footer>
-		      <a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
-		      <a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
-		      <a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
-		      <h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
-  		</footer>
+				<!-- Tents -->
+				<div class="home-cookware">
+					<a href="cookwares.html">
+						<img src="sources/cookwares.png" alt="Image of Cookwares">
+					</a>
+				</div>
 
-	</body>
+				<!-- Sales -->
+				<div class="home-event">
+					<a href="event.html">
+						<img src="sources/sales.png" alt="Sales">
+					</a>
+				</div>
 
-</html>
+			</div>
+
+			<footer>
+				<a href = "StyleGuide.html" class="in-text-style-footer">STYLEGUIDE</a>
+				<a href = "citation.html" class="in-text-style-footer">CITATIONS</a>
+				<a href = "https://github.com/nklui/sfuprojects/tree/master" class="in-text-style-footer">GITHUB PAGE</a>
+				<h5>&nbsp;&copy;2020 Jessie Lee & Nicholas Lui. All Rights Reserved.</h5>
+			</footer>
+
+		</body>
+
+		</html>
